@@ -1,0 +1,17 @@
+.heather-container{
+
+    background-color: var(--cor-2);
+    height: 107.90px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.labelFarmarcia{
+
+    font-family: "FarmarciaFonte";
+    color: var(--cor-1);
+    font-size: 50px;
+    padding-top: 9px;
+}

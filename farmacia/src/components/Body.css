@@ -1,0 +1,60 @@
+.body-container{
+
+    height: 100vh;
+    background-color: var(--cor-6);
+    background: linear-gradient(to right, #e96a7e, #ef97a4);
+    display: flex;
+
+}
+
+    .body-esquerda{
+
+        width: 8.5%;
+        height: 100vh;
+
+    }
+
+    .body-centro{
+
+        height: 100vh;
+        width: 83%;
+
+    }
+
+        .body-centro-bordas{
+
+            background-color: var(--cor-5);
+            border-radius: 10px;
+            margin-top: 8px;
+            height: 97.5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .label-quemSomos{
+
+            font-family: "FarmarciaFonte";
+            color: var(--cor-4);
+            padding: 5px;
+
+        }
+
+        .label-drogas{
+
+            font-family: 'FarmarciaFonte';
+            color: var(--cor-4);
+            font-size: 10px;
+            padding: 20px;
+
+        }
+
+
+
+    .body-direita{
+
+        width: 8.5%;
+        height: 100vh;
+
+    }
