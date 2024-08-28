@@ -1,0 +1,15 @@
+.titulo-container{
+
+    background: linear-gradient(#353956, #577BAD, #353956 );
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.h1-titulo{
+
+    padding: 5px;
+    padding-bottom: 3px;
+}

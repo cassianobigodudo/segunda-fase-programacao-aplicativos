@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'AAFonts';
+
+
+}
+
+body{
+
+  color: #cfaa53;
+  background-color: #353956;
+
+}
+
+@font-face {
+  font-family: 'AAFonts';
+  src: url(public/fonts/casablanca-serial-bold.ttf);
+}

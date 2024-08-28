@@ -1,0 +1,16 @@
+.sorteio-container{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.button-sorteio{
+
+    width: 100px;
+    height: 70px;
+    background-color: #6D5A6D;
+    color: #cfaa53;
+
+}
