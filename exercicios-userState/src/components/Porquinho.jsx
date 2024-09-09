@@ -15,8 +15,6 @@ let cinquentaCentavoQtd
 let dinheiroTotal
 let valorCompra
 
-
-
 function Porquinho() {
 
     const [resultado, setResultado] = useState()
