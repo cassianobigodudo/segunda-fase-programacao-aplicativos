@@ -1,8 +1,11 @@
 
 import ArcoDeSonado from "../components/ArcoDeSonado"
 import DemoCracia from "../components/DemoCracia"
+import DoisCoposCheios from "../components/DoisCoposCheios"
 import Ponderacao from "../components/Ponderacao"
 import Porquinho from "../components/Porquinho"
+import Prestacao from "../components/Prestacao"
+import UmCopoCheio from "../components/UmCopoCheio"
 
 
 function Exercicios() {
@@ -13,6 +16,9 @@ function Exercicios() {
       <Ponderacao/><br />
       <ArcoDeSonado/><br />
       <DemoCracia/><br />
+      <UmCopoCheio/><br />
+      <DoisCoposCheios/><br />
+      <Prestacao/>
     </div>
   )
 }

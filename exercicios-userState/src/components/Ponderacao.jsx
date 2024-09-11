@@ -1,3 +1,6 @@
+
+//todo: Faça um programa que receba quatro notas, sendo que cada nota só poderá receber valores de O a 10, calcule e mostre a média ponderada, sabendo que o usuário irá entrar com o peso de cada nota, caso a media ponderada seja: & Media maior ou igual a 7 - ALUNO APROVADO & Media menor que 7 - ALUNO REPROVADO
+
 import { useState } from "react"
 
 function Ponderacao() {

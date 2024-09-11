@@ -1,3 +1,5 @@
+//todo: DEMOcracia: faça um programa que leia a idade dos candidatos à presidência e de seus vices e depois indique qual chapa acumula mais experiência. Considere que estamos no segundo turno, com duas chapas candidato+vice.
+
 import { useState } from "react"
 
 let idadePresidenteChapaUm, idadeVicePresidenteChapaUm
@@ -39,7 +41,7 @@ function DemoCracia() {
 
     }else{
 
-      setResultado(`As chapas tem a mesma experiencia! EXP da chapa um: ${somaChapaUm} || EXP da chapa dois ${somaChapaDois}`)
+      setResultado(`Ambas as chapas tem a mesma experiencia! EXP da chapa um: ${somaChapaUm} || EXP da chapa dois ${somaChapaDois}`)
 
     }
 

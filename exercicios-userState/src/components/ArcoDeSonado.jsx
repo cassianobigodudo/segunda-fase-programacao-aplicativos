@@ -1,3 +1,5 @@
+//todo: Ligar o ar condicionado: Faça um programa onde o usuário irá escolher se quer converter graus Celsius para Fahrenheit ou Fahrenheit para Celsius. Após a ecolha, faça uma leitura e converta para a unidade escolhida.
+
 import { useState } from "react"
 
 function ArcoDeSonado() {
