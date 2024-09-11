@@ -12,7 +12,7 @@ function Exercicios() {
       <Porquinho/><br />
       <Ponderacao/><br />
       <ArcoDeSonado/><br />
-      <DemoCracia/>
+      <DemoCracia/><br />
     </div>
   )
 }
