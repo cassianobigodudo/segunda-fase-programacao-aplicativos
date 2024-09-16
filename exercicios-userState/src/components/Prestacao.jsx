@@ -40,11 +40,6 @@ function Prestacao() {
                 break
             default:
                 setResultado ('ERROR')
-    
-            
-    
-            
-
 
         }
 
