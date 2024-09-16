@@ -3,17 +3,23 @@
 import React from 'react'
 import { useState } from 'react'
 import './Albergue.css'
+import DiasErrados from './DiasErrados'
+import DiasCertos from './DiasCertos'
 
 let valorDias
 let descontoBalconista
 let descontoConvenio
 let valorFinal
-let multa = 150
 
 function Albergue() {
 
     const [inputDiasHospedados, setInputDiasHospedados] = useState()
+    const [valorDiasState, setValorDiasState] = useState()
     const [valorTotal, setValorTotal] = useState()
+    const [valorDesconto, setValorDesconto] = useState()
+    const [diasErrados, setDiasErrados] = useState(false)
+    const [diasCorretos, setDiasCorretos] = useState(false)
+    const [multa, setMulta] = useState(150)
 
     function diasHospedados(event){
         setInputDiasHospedados(Number(event.target.value))
@@ -25,10 +31,13 @@ function Albergue() {
 
         if(!Number.isInteger(inputDiasHospedados) || inputDiasHospedados < 1){
             
-            console.log(Number.isInteger(inputDiasHospedados))
-            setValorTotal('Não foi possível fazer sua hospedagem, número de dias inválido!')
+            setDiasErrados(true)
+            setDiasCorretos(false)
 
         }else{
+
+            setDiasCorretos(true)
+            setDiasErrados(false)
             console.log(Number.isInteger(inputDiasHospedados))
             switch (true){
 
@@ -51,7 +60,9 @@ function Albergue() {
             valorFinal = valorDias - descontoBalconista - descontoConvenio
             valorFinal += multa
 
-            setValorTotal(`Valor dos dias: R$${valorDias}.\nDesconto de 25% do convênio e da balconista: R$${valorFinal - multa}.\nMulta por baderna: R$${multa}\n\nValor total da hospedagem: R$${valorFinal}.`)
+            setValorDiasState(valorDias)
+            setValorDesconto(valorFinal - multa)
+            setValorTotal(valorFinal)
 
         }
 
@@ -70,8 +81,10 @@ function Albergue() {
             onChange={diasHospedados}
         /> <br />
         <button onClick={calcularHospedagem}>Calcular a quantidade de dias!</button>
-    
-        <p>{valorTotal}</p>
+
+        //todo resolver as renderizações condicionais
+        <p>{diasErrados && <DiasErrados/>}</p>
+        <p>{diasCorretos && <DiasCertos/>}</p>
 
       
     </div>
