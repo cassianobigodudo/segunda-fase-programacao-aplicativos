@@ -6,20 +6,21 @@ import './Albergue.css'
 import DiasErrados from './DiasErrados'
 import DiasCertos from './DiasCertos'
 
-let valorDias
-let descontoBalconista
-let descontoConvenio
-let valorFinal
 
 function Albergue() {
+    let valorDias
+    let descontoBalconista
+    let descontoConvenio
+    let valorFinal
+    let multa = 150
 
     const [inputDiasHospedados, setInputDiasHospedados] = useState()
-    const [valorDiasState, setValorDiasState] = useState()
-    const [valorTotal, setValorTotal] = useState()
-    const [valorDesconto, setValorDesconto] = useState()
+    // const [valorDiasState, setValorDiasState] = useState()
+    // const [valorTotal, setValorTotal] = useState()
+    // const [valorDesconto, setValorDesconto] = useState()
     const [diasErrados, setDiasErrados] = useState(false)
     const [diasCorretos, setDiasCorretos] = useState(false)
-    const [multa, setMulta] = useState(150)
+    // const [multa, setMulta] = useState(150)
 
     function diasHospedados(event){
         setInputDiasHospedados(Number(event.target.value))
@@ -36,8 +37,6 @@ function Albergue() {
 
         }else{
 
-            setDiasCorretos(true)
-            setDiasErrados(false)
             console.log(Number.isInteger(inputDiasHospedados))
             switch (true){
 
@@ -64,6 +63,10 @@ function Albergue() {
             setValorDesconto(valorFinal - multa)
             setValorTotal(valorFinal)
 
+            
+            setDiasCorretos(true)
+            setDiasErrados(false)
+
         }
 
     }
@@ -71,20 +74,35 @@ function Albergue() {
 
 
     return (
-    <div>
+    <div className='albergue-container'>
 
-        <h1>Bem vindo ao Albergue do bem, não o do filme!</h1>
-        <h2>Promoção: Até 5 diárias, o valor é R$100,00; de 6 a 10 diárias, o valor é R$90,00; de 11 dias em diante, o valor fica R$80,00</h2>
-        <p>Digite a quantidade de dias que deseja se hospedar:</p>
-        <input type="number" className='diasHospedados'
-            value={inputDiasHospedados}
-            onChange={diasHospedados}
-        /> <br />
-        <button onClick={calcularHospedagem}>Calcular a quantidade de dias!</button>
+        <DiasCertos
+            // valorDiasState={valorDias}
+            // valorDesconto ={valorFinal - 150}
+            // valorTotal = {valorFinal}
+            // multa= {150}
+        />
 
-        //todo resolver as renderizações condicionais
-        <p>{diasErrados && <DiasErrados/>}</p>
-        <p>{diasCorretos && <DiasCertos/>}</p>
+        <div className='texto-container'>
+            <h1>Bem vindo ao Albergue do bem, não o do filme!</h1>
+            <h2>Promoção: Até 5 diárias, o valor é R$100,00; de 6 a 10 diárias, o valor é R$90,00; de 11 dias em diante, o valor fica R$80,00</h2>
+            <p>Digite a quantidade de dias que deseja se hospedar:</p>
+        </div>
+        
+        <div className='inputButton-container'>
+            <input type="number" className='diasHospedados'
+                value={inputDiasHospedados}
+                onChange={diasHospedados}
+            /> <br />
+            <button onClick={calcularHospedagem}>Calcular a quantidade de dias!</button>
+        </div>
+        
+
+        <div className='resultado-container'>
+            {/* <p>{diasErrados && <DiasErrados/>}</p>
+            <p>{diasCorretos && <DiasCertos/>}</p> */}
+        </div>
+        
 
       
     </div>
