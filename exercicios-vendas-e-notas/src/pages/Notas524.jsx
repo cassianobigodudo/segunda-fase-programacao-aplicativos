@@ -15,19 +15,19 @@ function Notas524() {
     switch (true){
 
       case mediaNotas >= 0 && mediaNotas <= 4:
-        setResultado('Conceito E')
+        setResultado(`As notas do aluno sendo ${notaUm} e ${notaDois}, sendo a média ${mediaNotas}, o aluno atingiu o Conceito E`)
         break;
       case mediaNotas > 4 && mediaNotas <= 6:
-        setResultado('Conceito D')
+        setResultado(`As notas do aluno sendo ${notaUm} e ${notaDois}, sendo a média ${mediaNotas}, o aluno atingiu o Conceito D`)
         break;
       case mediaNotas > 6 && mediaNotas <= 7.5:
-        setResultado('Conceito C')
+        setResultado(`As notas do aluno sendo ${notaUm} e ${notaDois}, sendo a média ${mediaNotas}, o aluno atingiu o Conceito C`)
         break;
       case mediaNotas > 7.5 && mediaNotas <= 9:
-        setResultado('Conceito B')
+        setResultado(`As notas do aluno sendo ${notaUm} e ${notaDois}, sendo a média ${mediaNotas}, o aluno atingiu o Conceito B`)
         break;
       case mediaNotas > 9 && mediaNotas <= 10:
-        setResultado('Conceito A')
+        setResultado(`As notas do aluno sendo ${notaUm} e ${notaDois}, sendo a média ${mediaNotas}, o aluno atingiu o Conceito A`)
         break;
     }
 
