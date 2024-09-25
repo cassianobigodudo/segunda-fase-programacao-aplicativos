@@ -11,13 +11,29 @@ function Vendaas523() {
 
     function calcularValor(){
 
+        let valorFinal
+
         if(inputValor <= 0){
 
             setResultado('Não é possível calcular, preço indisponível')
 
         }else{
 
+            if (inputValor < 20){
 
+                valorFinal = inputValor * 45 / 100
+                valorFinal += Number(inputValor)
+
+                setResultado(`Valor da venda do produto com lucro de 45%: R$${valorFinal}`)
+
+            }else{
+
+                valorFinal = inputValor * 30 /100
+                valorFinal += Number(inputValor)
+
+                setResultado(`Valor da venda do produto com lucro de 30%: R$${valorFinal}`)
+
+            }
 
         }
 
