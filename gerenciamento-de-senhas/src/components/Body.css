@@ -1,0 +1,5 @@
+.body-container{
+
+    background: linear-gradient(to top, var(--cor-6), var(--cor-2));
+    height: 521px;
+}
