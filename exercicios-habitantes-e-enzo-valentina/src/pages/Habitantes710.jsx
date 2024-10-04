@@ -2,19 +2,34 @@ import React, { useState } from 'react'
 
 function Habitantes710() {
 
-    let cont = 0
+    const [cont, setCont] = useState(0)
     const [inputAltura, setInputAltura] = useState()
     const [inputGenero, setInputGenero] = useState()
     const [vetorHabitantes, setVetorHabitante] = useState([])
-    let objHabitantes = {
-        altura: 0,
-        genero: 0
-    }
+    
 
     function registrarHabitante(){
 
+        if (inputAltura == null || inputGenero == null){
 
+            alert('Inválido. Tenha certeza que ambas as caixas estejam com valores válidos')
 
+        }else{
+            
+            let objHabitantes = {
+                altura: inputAltura,
+                genero: inputGenero
+            }
+
+            setCont(cont + 1)
+
+            setVetorHabitante([...vetorHabitantes, objHabitantes])
+        }
+
+        console.log(cont)
+        if (cont > 8){
+            alert('teste')
+        }
     }
 
   return (
@@ -48,6 +63,7 @@ function Habitantes710() {
             />
             <p></p>
             <button onClick={registrarHabitante}>Registrar a {cont + 1}ª pessoa</button>
+            
 
 
     </div>
