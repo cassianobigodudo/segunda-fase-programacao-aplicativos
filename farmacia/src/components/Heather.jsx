@@ -1,11 +1,12 @@
 import './Heather.css'
+import LogoHeather from './LogoHeather'
 
 function Heather() {
   return (
     <div className='heather-container'>
-        <img className='image-logo-pq' src="./images/farmarcia-logo-pq.png" alt="" />
+      <LogoHeather/>
         <label className='labelFarmarcia'>FARMÁRCIA</label>
-        <img className='image-logo-pq' src="./images/farmarcia-logo-pq.png" alt="" />
+      <LogoHeather/>
     </div>
   )
 }

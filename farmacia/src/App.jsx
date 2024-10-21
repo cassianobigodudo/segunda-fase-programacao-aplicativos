@@ -9,11 +9,8 @@ function App() {
 
   return (
     <>
-    <LogoHeather/>
     <Heather/>
     <Body/>
-    <LogoFarmarciaBody/>
-    <Camisetas/>
     </>
   )
 }
