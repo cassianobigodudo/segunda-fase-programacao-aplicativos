@@ -43,12 +43,12 @@ function Body() {
 
     if(filaPreferencial.length){
 
-      alert(filaPreferencial[0].numero)
+      alert("Número: " +  filaPreferencial[0].numero)
       setFilaPreferencial(filaPreferencial.slice(1))
 
     }else if (filaNormal.length){
 
-      alert(filaNormal[0].numero)
+      alert("Número: "+filaNormal[0].numero)
       setFilaNormal(filaNormal.slice(1))
 
     }else{

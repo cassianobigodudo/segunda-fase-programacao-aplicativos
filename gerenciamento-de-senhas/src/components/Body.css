@@ -2,4 +2,7 @@
 
     background: linear-gradient(to top, var(--cor-6), var(--cor-2));
     height: 521px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
